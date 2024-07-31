@@ -1,10 +1,11 @@
-for func in ~/.config/zsh/functions/*.zsh; do
+export TERMINAL=alacritty
+
+for func in ~/dotfiles/zsh/functions/*.zsh; do
     source $func
 done
 
-source ~/.config/zsh/web_pages.zsh
+source ~/dotfiles/zsh/web_pages.zsh
 
-# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="afowler"
@@ -104,13 +105,13 @@ export JAVA_HOME="/usr/lib/jvm/jdk-19"
 
 export PATH=$PATH:/opt/gradle/gradle-8.7/bin
 
-path+=/home/jangor/.cargo/bin
+path+=/home/$USER/.cargo/bin
 
-alias mvn="/home/jangor/opt/apache-maven-3.9.6/bin/mvn"
-alias sqldeveloper="/home/jangor/sqldeveloper-20.2.0/opt/sqldeveloper/sqldeveloper/bin/sqldeveloper"
-alias datamodeler="/home/jangor/datamodeler-23.1.0.087.0806/opt/datamodeler/datamodeler/bin/datamodeler"
-alias rars="java -jar /home/jangor/rars.jar"
-alias mars="java -jar /home/jangor/Mars.jar"
+alias mvn="/home/$USER/opt/apache-maven-3.9.6/bin/mvn"
+alias sqldeveloper="/home/$USER/sqldeveloper-20.2.0/opt/sqldeveloper/sqldeveloper/bin/sqldeveloper"
+alias datamodeler="/home/$USER/datamodeler-23.1.0.087.0806/opt/datamodeler/datamodeler/bin/datamodeler"
+alias rars="java -jar /home/$USER/rars.jar"
+alias mars="java -jar /home/$USER/Mars.jar"
 alias matlab="matlab -softwareopengl"
 
 alias op="cd vaults/personal/"
@@ -131,6 +132,7 @@ export GO111MODULE="on"
 
 . "$HOME/.cargo/env"
 
+export PATH="$HOME/.local/bin:$PATH"
 eval "$(zoxide init zsh)"
 
 
@@ -138,7 +140,7 @@ eval "$(zoxide init zsh)"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -f "/home/jangor/.ghcup/env" ] && . "/home/jangor/.ghcup/env" # ghcup-env
+[ -f "/home/$USER/.ghcup/env" ] && . "/home/$USER/.ghcup/env" # ghcup-env
 
 # temporary others
 alias alg="open ~/learning/algorithms/Algorithms.pdf"
