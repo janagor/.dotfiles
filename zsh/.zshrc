@@ -114,6 +114,8 @@ alias rars="java -jar /home/$USER/rars.jar"
 alias mars="java -jar /home/$USER/Mars.jar"
 alias matlab="matlab -softwareopengl"
 
+alias weather="curl http://wttr.in"
+
 alias op="cd vaults/personal/"
 alias ow="cd vaults/work/"
 alias os="cd vaults/study/"
