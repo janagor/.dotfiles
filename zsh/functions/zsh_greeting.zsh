@@ -47,7 +47,7 @@ function zsh_greeting {
     # 15%
     local r=$(( RANDOM % 101 ))
     if [ $r -lt 15 ]; then
-        echo -e "\\e[36m  Compiler: writing Rust clone language (maybe in C)?"
+        echo -e "\\e[36m  Compiler: writing Cool clone language (maybe in C)?"
     fi
     local r=$(( RANDOM % 101 ))
     if [ $r -lt 15 ]; then
@@ -88,3 +88,5 @@ function zsh_greeting {
 }
 
 zsh_greeting
+
+echo -e "$(tb)"
