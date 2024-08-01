@@ -3,8 +3,8 @@ vim.g.have_nerd_font = true
 -- See `:help vim.opt`
 --  For more options, you can see `:help option-list`
 
--- vim.opt.tabstop = 8
--- vim.opt.softtabstop = 0
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.colorcolumn = '80'
@@ -13,8 +13,6 @@ vim.opt.encoding = 'UTF_8'
 vim.opt.foldmethod = 'indent'
 vim.opt.foldlevelstart = 10
 vim.opt.foldnestmax = 10
-vim.opt.number = true
--- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
 -- Enable mouse mode, can be useful for resizing splits for example!
