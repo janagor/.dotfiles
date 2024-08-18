@@ -135,7 +135,6 @@ export GO111MODULE="on"
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/bin:$PATH"
-eval "$(zoxide init zsh)"
 
 
 # export NVM_DIR="$HOME/.nvm"
@@ -152,3 +151,7 @@ alias opsys="open ~/learning/operating_systems/Operating_systems_Design_and_Impl
 
 alias db="open ~/Database\ Internals.pdf"
 
+
+# fzf
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh

@@ -89,4 +89,3 @@ function zsh_greeting {
 
 zsh_greeting
 
-echo -e "$(tb)"
