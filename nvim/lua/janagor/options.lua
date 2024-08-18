@@ -58,3 +58,5 @@ vim.opt.scrolloff = 5
 vim.o.termguicolors = true
 
 vim.o.conceallevel = 2
+
+vim.o.guicursor = "a:block"
