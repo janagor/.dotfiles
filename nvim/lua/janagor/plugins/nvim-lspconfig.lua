@@ -1,8 +1,18 @@
 return {
-  { -- LSP Configuration & Plugins
+  {
     'neovim/nvim-lspconfig',
+    dependencies = {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'WhoIsSethDaniel/mason-tool-installer.nvim',
+
+      { 'j-hui/fidget.nvim', opts = {} },
+
+      { 'folke/neodev.nvim', opts = {} },
+    },
   },
 }
+
 -- return {
 --   { -- LSP Configuration & Plugins
 --     'neovim/nvim-lspconfig',
@@ -183,59 +193,8 @@ return {
 --           mason = false,
 --           cmd = {
 --             'clangd',
---             '--function-arg-placeholders=false',
---             '--enable-config',
---             '--fallback-style=llvm',
---             '--header-insertion=iwyu',
---             '--background-index',
---             '--completion-style=detailed',
---             '--pretty',
---             '--j=4',
 --           },
---           single_file_support = true,
 --         },
---         -- clangd = {
---         --   keys = {
---         --     {
---         --       '<leader>ch',
---         --       '<cmd>ClangdSwitchSourceHeader<cr>',
---         --       desc = 'Switch Source/Header (C/C++)',
---         --     },
---         --   },
---         --   root_dir = function(fname)
---         --     return require('lspconfig.util').root_pattern(
---         --       'Makefile',
---         --       'configure.ac',
---         --       'configure.in',
---         --       'config.h.in',
---         --       'meson.build',
---         --       'meson_options.txt',
---         --       'build.ninja'
---         --     )(fname) or require('lspconfig.util').root_pattern(
---         --       'compile_commands.json',
---         --       'compile_flags.txt'
---         --     )(fname) or require('lspconfig.util').find_git_ancestor(
---         --       fname
---         --     )
---         --   end,
---         --   capabilities = {
---         --     offsetEncoding = { 'utf-16' },
---         --   },
---         --   cmd = {
---         --     'clangd',
---         --     '--background-index',
---         --     '--clang-tidy',
---         --     '--header-insertion=iwyu',
---         --     '--completion-style=detailed',
---         --     '--function-arg-placeholders',
---         --     '--fallback-style=llvm',
---         --   },
---         --   init_options = {
---         --     usePlaceholders = true,
---         --     completeUnimported = true,
---         --     clangdFileStatus = true,
---         --   },
---         -- },
 --         pylsp = {
 --           mason = false,
 --           cmd = { 'pylsp' },
