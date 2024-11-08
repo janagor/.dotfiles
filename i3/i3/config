@@ -1,37 +1,13 @@
-# Should you change your keyboard layout some time, delete
-# this file and re-run i3-config-wizard(1).
-#
-
-# i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
 font pango:hack 14
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
@@ -45,10 +21,7 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-
-# kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
@@ -180,11 +153,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
 
 # Start of my own config
 assign [class="Alacritty"] 2
@@ -195,12 +163,12 @@ assign [class="gimp"] 6
 assign [class="thinderbird"] 7
 assign [class="Tor Browser"] 8
 
-exec --no-startup-id i3-msg "workspace 2; exec alacritty"
-exec --no-startup-id i3-msg "workspace 3; exec firefox"
-exec --no-startup-id i3-msg "workspace 4; exec obsidian"
-exec --no-startup-id i3-msg "workspace 5; exec anki"
-exec --no-startup-id i3-msg "workspace 6; exec gimp"
-exec --no-startup-id i3-msg "workspace 7; exec thunderbird"
+# exec --no-startup-id i3-msg "workspace 2; exec alacritty"
+# exec --no-startup-id i3-msg "workspace 3; exec firefox"
+# exec --no-startup-id i3-msg "workspace 4; exec obsidian"
+# exec --no-startup-id i3-msg "workspace 5; exec anki"
+# exec --no-startup-id i3-msg "workspace 6; exec gimp"
+# exec --no-startup-id i3-msg "workspace 7; exec thunderbird"
 # exec --no-startup-id i3-msg "workspace 8; exec torbrowser-lancher"
 
 exec "setxkbmap -layout pl"
@@ -219,3 +187,6 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
+bar {
+        status_command i3status
+}
