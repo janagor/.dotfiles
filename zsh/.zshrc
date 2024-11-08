@@ -116,13 +116,6 @@ alias matlab="matlab -softwareopengl"
 
 alias weather="curl http://wttr.in"
 
-alias op="cd vaults/personal/"
-alias ow="cd vaults/work/"
-alias os="cd vaults/study/"
-alias oop="xdg-open \"obsidian://new?vault=personal\""
-alias oow="xdg-open \"obsidian://new?vault=work\""
-alias oos="xdg-open \"obsidian://new?vault=study\""
-
 alias ls="lsd -a"
 
 export PYRIGHT_PYTHON_FORCE_VERSION=latest
@@ -141,7 +134,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -f "/home/$USER/.ghcup/env" ] && . "/home/$USER/.ghcup/env" # ghcup-env
 
 # temporary others
 alias alg="open ~/learning/algorithms/Algorithms.pdf"
@@ -155,3 +147,5 @@ alias db="open ~/Database\ Internals.pdf"
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+[ -f "/home/janagorski/.ghcup/env" ] && . "/home/janagorski/.ghcup/env" # ghcup-env
