@@ -1,10 +1,10 @@
 export TERMINAL=alacritty
 
-for func in ~/dotfiles/zsh/functions/*.zsh; do
+for func in ~/.dotfiles/zsh/functions/*.zsh; do
     source $func
 done
 
-source ~/dotfiles/zsh/web_pages.zsh
+source ~/.dotfiles/zsh/web_pages.zsh
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
@@ -46,7 +46,6 @@ plugins=(
 	zsh-interactive-cd
 	zsh-navigation-tools
 	zsh-autosuggestions
-	web-search
 	zsh-syntax-highlighting
 	copypath
 	dirhistory
@@ -54,11 +53,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
@@ -76,10 +72,6 @@ export ARCHFLAGS="-arch x86_64"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
   ### ZNT's installer added snippet ###
@@ -107,12 +99,12 @@ export PATH=$PATH:/opt/gradle/gradle-8.7/bin
 
 path+=/home/$USER/.cargo/bin
 
-alias mvn="/home/$USER/opt/apache-maven-3.9.6/bin/mvn"
-alias sqldeveloper="/home/$USER/sqldeveloper-20.2.0/opt/sqldeveloper/sqldeveloper/bin/sqldeveloper"
-alias datamodeler="/home/$USER/datamodeler-23.1.0.087.0806/opt/datamodeler/datamodeler/bin/datamodeler"
-alias rars="java -jar /home/$USER/rars.jar"
-alias mars="java -jar /home/$USER/Mars.jar"
-alias matlab="matlab -softwareopengl"
+# alias mvn="/home/$USER/opt/apache-maven-3.9.6/bin/mvn"
+# alias sqldeveloper="/home/$USER/sqldeveloper-20.2.0/opt/sqldeveloper/sqldeveloper/bin/sqldeveloper"
+# alias datamodeler="/home/$USER/datamodeler-23.1.0.087.0806/opt/datamodeler/datamodeler/bin/datamodeler"
+# alias rars="java -jar /home/$USER/rars.jar"
+# alias mars="java -jar /home/$USER/Mars.jar"
+# alias matlab="matlab -softwareopengl"
 
 alias weather="curl http://wttr.in"
 
@@ -134,18 +126,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-# temporary others
-alias alg="open ~/learning/algorithms/Algorithms.pdf"
-alias algpl="open ~/learning/algorithms/Algorytmy.pdf"
-alias cormen="open ~/learning/algorithms/Introduction.to.Algorithms.4th.pdf"
-alias opsys="open ~/learning/operating_systems/Operating_systems_Design_and_Implementation.pdf"
-
-alias db="open ~/Database\ Internals.pdf"
-
-
 # fzf
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+# source /usr/share/fzf/key-bindings.zsh
+# source /usr/share/fzf/completion.zsh
 
-[ -f "/home/janagorski/.ghcup/env" ] && . "/home/janagorski/.ghcup/env" # ghcup-env
+# [ -f "/home/janagorski/.ghcup/env" ] && . "/home/janagorski/.ghcup/env" # ghcup-env
