@@ -35,48 +35,46 @@ function zsh_greeting {
 
     # 10%
     local r=$(( RANDOM % 101 ))
-    if [ $r -lt 5 ]; then
-        echo -e " \\e[1mBacklog\\e[0;32m"
-        echo -e "\\e[34m  Haskell: learning functional languages."
-        echo
-    fi
+    # if [ $r -lt 5 ]; then
+    #     echo -e "\\e[34m  Haskell: learning functional languages."
+    #     echo
+    # fi
 
     echo -e "\\e[0m \\e[1mTODOs\\e[0;32m"
     echo
 
     # 15%
-    local r=$(( RANDOM % 101 ))
-    if [ $r -lt 15 ]; then
-        echo -e "\\e[36m  Compiler: writing Cool clone language (maybe in C)?"
-    fi
-    local r=$(( RANDOM % 101 ))
-    if [ $r -lt 15 ]; then
-        echo -e "\\e[36m  Interpreter: writing Rust clone language (maybe in Zig)?"
-    fi
+    # local r=$(( RANDOM % 101 ))
+    # if [ $r -lt 15 ]; then
+    #     echo -e "\\e[36m  Compiler: writing Cool clone language (maybe in C)?"
+    # fi
+    # local r=$(( RANDOM % 101 ))
+    # if [ $r -lt 15 ]; then
+    #     echo -e "\\e[36m  Interpreter: writing Rust clone language (maybe in Zig)?"
+    # fi
 
     # 25%
-    local r=$(( RANDOM % 101 ))
-    if [ $r -lt 25 ]; then
-        echo -e "\\e[32m  RayTracer: finishing ray_tracing_the_next_week project."
-    fi
-    local r=$(( RANDOM % 101 ))
-    if [ $r -lt 25 ]; then
-        echo -e "\\e[32m  Chatter: making social media app clone in Java."
-    fi
+    # local r=$(( RANDOM % 101 ))
+    # if [ $r -lt 25 ]; then
+    #     echo -e "\\e[32m  RayTracer: finishing ray_tracing_the_next_week project."
+    # fi
+    # local r=$(( RANDOM % 101 ))
+    # if [ $r -lt 25 ]; then
+    #     echo -e "\\e[32m  Chatter: making social media app clone in Java."
+    # fi
 
     # 50%
-    local r=$(( RANDOM % 101 ))
-    if [ $r -lt 50 ]; then
-        echo -e "\\e[33m  Linux internals: making notes."
-    fi
-    local r=$(( RANDOM % 101 ))
-    if [ $r -lt 50 ]; then
-        echo -e "\\e[33m  Algorithms: all algorithms implemented in C."
-    fi
+    # local r=$(( RANDOM % 101 ))
+    # if [ $r -lt 50 ]; then
+    #     echo -e "\\e[33m  Algorithms: all algorithms implemented in C."
+    # fi
 
     # 100%
-    echo -e "\\e[31m  Algorithms: 'alg', 'algpl', 'cormen'."
-    echo -e "\\e[31m  Database internals: 'db'."
+    echo -e "\\e[31m  SOI - doing ex. no. 1"
+    echo -e "\\e[31m  WUS - doing ex. no. 1."
+    echo -e "\\e[31m  PARP - finishing prolog project."
+    echo -e "\\e[31m  BSS - finding the 2 last flags."
+    echo -e "\\e[31m  ZPR - doing prototype of the program."
 
     if [ -s ~/todo ]; then
         echo -e "\\e[35m"
