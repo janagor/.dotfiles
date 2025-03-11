@@ -1,0 +1,15 @@
+-- local function set_keymaps(bufnr)
+-- 	local opts = { noremap = true, silent = true, buffer = bufnr }
+-- 	local keymap = vim.keymap.set
+--
+-- 	keymap("n", "<leader>ch", "ClangdSwitchSourceHeader<CR>", opts)
+-- end
+--
+-- local clangd_extensions = require('clangd_extensions')
+--
+-- clangd_extensions.setup({
+-- 	on_attach = function(_, bufnr)
+-- 		set_keymaps(bufnr)
+-- 	end,
+-- })
+vim.keymap.set("n", "<leader>ch", "<cmd>ClangdSwitchSourceHeader<CR>")

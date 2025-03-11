@@ -1,8 +1,12 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-require 'janagor.health'
 require 'janagor.options'
 require 'janagor.keymaps'
+-- require 'janagor.health'
 require 'janagor.autocmds'
-require 'janagor.init'
-require('lazy').setup { import = 'janagor.plugins' }
+require 'janagor.lazy'
+
+ require('lazy').setup({ 
+ 	spec = { import = 'janagor.plugins' },
+	checker = { enable = true },
+ })

@@ -1,5 +1,4 @@
 return {
-  -- Highlight todo, notes, etc in comments
   {
     'folke/todo-comments.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
@@ -7,7 +6,7 @@ return {
     priority = 1000,
     event = 'VimEnter',
     opts = {
-      signs = false,
+      signs = true,
       keywords = {
         FIX = {
           color = 'error',
@@ -32,10 +31,18 @@ return {
       },
       merge_keywords = true,
       highlight = {
-        multiline = false,
+        multiline = true,
         before = 'fg',
         keyword = 'bg',
         after = 'fg',
+      },
+      colors = {
+        error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+        warning = { "DiagnosticWarn", "WarningMsg", "#FBBF24" },
+        info = { "DiagnosticInfo", "#2563EB" },
+        hint = { "DiagnosticHint", "#10B981" },
+        default = { "Identifier", "#7C3AED" },
+        test = { "Identifier", "#FF00FF" }
       },
     },
   },
